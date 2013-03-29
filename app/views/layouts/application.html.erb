@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title><%= yield :meta_title %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+<div class="wrapper col0">
+  <div id="topbar">
+    <div id="slidepanel">
+      <div class="topbox">
+        <h2>ТУСУР</h2>
+        <p>ТУСУР – самый молодой из томских университетов, но никогда не был в тени. Созданный во времена прорыва в космос, бурного развития электронно-вычислительной техники, новых средств связи и радиоэлектроники вуз с первых лет своего существования находился на острие научно-технического прогресса. ТИРиЭТ, ТИАСУР, ТАСУР, ТУСУР: как бы он ни назывался, - это марка лидера. Лидера в сфере подготовки квалифицированных кадров для высокотехнологичных отраслей экономики, внедрения инновационных образовательных и исследовательских программ, прикладных разработок новой техники, аппаратуры и систем управления.</p>
+        <p class="readmore"><a href="#">Далее &raquo;</a></p>
+      </div>
+      <div class="topbox">
+        <h2>Вход для преподавателя</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Форма входа преподавателя</legend>
+            <label for="teachername">Логин:
+              <input type="text" name="teachername" id="teachername" value="" />
+            </label>
+            <label for="teacherpass">Пароль:
+              <input type="password" name="teacherpass" id="teacherpass" value="" />
+            </label>
+            <label for="teacherremember">
+              <input class="checkbox" type="checkbox" name="teacherremember" id="teacherremember" checked="checked" />
+              Запомнить меня</label>
+            <p>
+              <input type="submit" name="teacherlogin" id="teacherlogin" value="Login" />
+              &nbsp;
+              <input type="reset" name="teacherreset" id="teacherreset" value="Reset" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="topbox last">
+        <h2>Вход для студентов</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Вход для студентов</legend>
+            <label for="pupilname">Логин:
+              <input type="text" name="pupilname" id="pupilname" value="" />
+            </label>
+            <label for="pupilpass">Пароль:
+              <input type="password" name="pupilpass" id="pupilpass" value="" />
+            </label>
+            <label for="pupilremember">
+              <input class="checkbox" type="checkbox" name="pupilremember" id="pupilremember" checked="checked" />
+              Remember me</label>
+            <p>
+              <input type="submit" name="pupillogin" id="pupillogin" value="Login" />
+              &nbsp;
+              <input type="reset" name="pupilreset" id="pupilreset" value="Reset" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <br class="clear" />
+    </div>
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Вход &raquo;</li>
+        <li class="right" id="toggle"><a id="slideit" href="#slidepanel">Сотрудники</a><a id="closeit" style="display: none;" href="#slidepanel">Закрыть</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">Кафедра Системного Анализа</a></h1>
+      <p>Факультет Моделирования Систем</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li class="last"><a href="#">Поиск</a></li>
+        <li><a href="#">Онлайн поддержка</a></li>
+        <li><a href="http://timetable.tusur.ru/faculties/fms">Расписание</a></li>
+      </ul>
+      <p>Тел: xxxxx xxxxxxxxxx | Mail: info@domain.com</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topnav">
+    <ul>
+      <li class="active"><a href="index.html">Главная</a>
+        <ul>
+          <li><a href="#">Студенты</a></li>
+          <li><a href="#">Преподаватели</a></li>
+          <li class="last"><a href="#">О Кафедре</a></li>
+        </ul>
+      </li>
+      <li><a href="style-demo.html">Страница</a>
+        <ul>
+          <li><a href="#">Страница</a></li>
+          <li><a href="#">Страница</a></li>
+          <li class="last"><a href="#">Страница</a></li>
+        </ul>
+      </li>
+      <li><a href="full-width.html">Страница</a>
+        <ul>
+          <li><a href="#">Страница</a></li>
+          <li><a href="#">Страница</a></li>
+          <li class="last"><a href="#">Страница</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Страница</a></li>
+      <li class="last"><a href="#">Страница</a></li>
+    </ul>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="featured_slide">
+    <div id="featured_wrap">
+      <ul id="featured_tabs">
+        <li><a href="#fc1">Картинка о кафедре<br />
+          <span>Что-нибудь интересное и поучительное.</span></a></li>
+        <li><a href="#fc2">Картинка о кафедре<br />
+          <span>Что-нибудь интересное и поучительное.</span></a></li>
+        <li><a href="#fc3">Картинка о кафедре<br />
+          <span>Что-нибудь интересное и поучительное.</span></a></li>
+        <li class="last"><a href="#fc4">Картинка о кафедре<br />
+          <span>Что-нибудь интересное и поучительное.</span></a></li>
+      </ul>
+      <div id="featured_content">
+        <div class="featured_box" id="fc1"><img src="/assets/demo/1.gif" alt="" />
+          <div class="floater"><a href="#">Далее &raquo;</a></div>
+        </div>
+        <div class="featured_box" id="fc2"><img src="/assets/demo/2.gif" alt="" />
+          <div class="floater"><a href="#">Далее &raquo;</a></div>
+        </div>
+        <div class="featured_box" id="fc3"><img src="/assets/demo/3.gif" alt="" />
+          <div class="floater"><a href="#">Далее &raquo;</a></div>
+        </div>
+        <div class="featured_box" id="fc4"><img src="/assets/demo/4.gif" alt="" />
+          <div class="floater"><a href="#">Далее &raquo;</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="container">
+    <div id="hpage">
+      <ul>
+        <li>
+          <h2>Интереснейшная новость</h2>
+          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
+          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
+          <p class="readmore"><a href="#">Далее &raquo;</a></p>
+        </li>
+        <li>
+          <h2>Интереснейшная новость</h2>
+          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
+          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
+          <p class="readmore"><a href="#">Далее &raquo;</a></p>
+        </li>
+        <li>
+          <h2>Интереснейшная новость</h2>
+          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
+          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
+          <p class="readmore"><a href="#">Далее &raquo;</a></p>
+        </li>
+        <li class="last">
+          <h2>Интереснейшная новость</h2>
+          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
+          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
+          <p class="readmore"><a href="#">Далее &raquo;</a></p>
+        </li>
+      </ul>
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Не теряй головы !</h2>
+      <p>Заполните e-mail и подпишитесь на новости</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Лента новостей</legend>
+          <input type="text" value="Введите e-mail здесь&hellip;"  onfocus="this.value=(this.value=='Введите e-mail здесь&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>Для разъяснений <a href="#">кликните здесь &raquo;</a></p>
+    </div>
+    <div class="footbox">
+      <h2>Блок в футере</h2>
+      <ul>
+        <li><a href="#">Надпись первая</a></li>
+        <li><a href="#">Надпись первая</a></li>
+        <li><a href="#">Надпись длинная</a></li>
+        <li><a href="#">Надпись очень длинная</a></li>
+        <li class="last"><a href="#">Надпись первая</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Блок в футере</h2>
+      <ul>
+        <li><a href="#">Надпись первая</a></li>
+        <li><a href="#">Надпись первая</a></li>
+        <li><a href="#">Надпись длинная</a></li>
+        <li><a href="#">Надпись очень длинная</a></li>
+        <li class="last"><a href="#">Надпись первая</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Блок в футере</h2>
+      <ul>
+        <li><a href="#">Надпись первая</a></li>
+        <li><a href="#">Надпись первая</a></li>
+        <li><a href="#">Надпись длинная</a></li>
+        <li><a href="#">Надпись очень длинная</a></li>
+        <li class="last"><a href="#">Надпись первая</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">&copy; 2013 - Кафедра Системного Анализа - <a href="#">ТУСУР</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
