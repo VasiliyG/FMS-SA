@@ -4933,3 +4933,34 @@ Migrating to MoveAdminNotesToComments (20130329054811)
   [1m[35m (26.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130329054811')
   [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (26.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateAdminUsers (20130329054745)
+  [1m[35m (82.7ms)[0m  CREATE TABLE `admin_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (20.3ms)[0m  [1mCREATE UNIQUE INDEX `index_admin_users_on_email` ON `admin_users` (`email`)[0m
+  [1m[35m (23.6ms)[0m  CREATE UNIQUE INDEX `index_admin_users_on_reset_password_token` ON `admin_users` (`reset_password_token`)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAdminUser Exists (0.5ms)[0m  SELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'admin@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `admin_users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2013-04-09 01:31:24', NULL, NULL, 'admin@example.com', '$2a$10$g77DhvJh6RrrZRjqvDfTpe6m01HAEUwvce04b1uROU3QWBcLqHHyK', NULL, NULL, NULL, NULL, NULL, 0, '2013-04-09 01:31:24')[0m
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130329054745')[0m
+Migrating to CreateAdminNotes (20130329054810)
+  [1m[35m (5.6ms)[0m  CREATE TABLE `admin_notes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `resource_id` varchar(255) NOT NULL, `resource_type` varchar(255) NOT NULL, `admin_user_id` int(11), `admin_user_type` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (20.4ms)[0m  [1mCREATE INDEX `index_admin_notes_on_resource_type_and_resource_id` ON `admin_notes` (`resource_type`, `resource_id`)[0m
+  [1m[35m (23.5ms)[0m  CREATE INDEX `index_admin_notes_on_admin_user_type_and_admin_user_id` ON `admin_notes` (`admin_user_type`, `admin_user_id`)
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130329054810')[0m
+Migrating to MoveAdminNotesToComments (20130329054811)
+  [1m[35m (13.1ms)[0m  DROP INDEX `index_admin_notes_on_admin_user_type_and_admin_user_id` ON `admin_notes`
+  [1m[36m (3.5ms)[0m  [1mRENAME TABLE `admin_notes` TO `active_admin_comments`[0m
+  [1m[35m (1.1ms)[0m  SHOW COLUMNS FROM `active_admin_comments` LIKE 'admin_user_type'
+  [1m[36m (9.4ms)[0m  [1mALTER TABLE `active_admin_comments` CHANGE `admin_user_type` `author_type` varchar(255) DEFAULT NULL[0m
+  [1m[35m (1.3ms)[0m  SHOW COLUMNS FROM `active_admin_comments` LIKE 'admin_user_id'
+  [1m[36m (16.1ms)[0m  [1mALTER TABLE `active_admin_comments` CHANGE `admin_user_id` `author_id` int(11) DEFAULT NULL[0m
+  [1m[35m (9.4ms)[0m  ALTER TABLE `active_admin_comments` ADD `namespace` varchar(255)
+  [1m[36m (21.6ms)[0m  [1mCREATE INDEX `index_active_admin_comments_on_namespace` ON `active_admin_comments` (`namespace`)[0m
+  [1m[35m (26.8ms)[0m  CREATE INDEX `index_active_admin_comments_on_author_type_and_author_id` ON `active_admin_comments` (`author_type`, `author_id`)
+  [1m[36m (0.3ms)[0m  [1mUPDATE active_admin_comments SET namespace='admin'[0m
+  [1m[35m (2.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130329054811')
+  [1m[36m (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
