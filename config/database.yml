@@ -16,7 +16,7 @@ development:
   pool: 5
   username: root
   password:
-  host: 127.0.0.1
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
@@ -26,4 +26,4 @@ production:
   pool: 5
   username: root
   password:
-  host: 127.0.0.1
+  socket: /var/run/mysqld/mysqld.sock

@@ -5,6 +5,8 @@ ru:
       welcome: "Добро пожаловать в Active Admin. Это стандартная страница управления сайтом."
       call_to_action: "Чтобы добавить сюда что-нибудь загляните в 'app/admin/dashboards.rb'"
     view: "Открыть"
+    create: 'Создать'
+    update: 'Обновить'
     edit: "Изменить"
     delete: "Удалить"
     delete_confirmation: "Вы уверены, что хотите удалить это?"
@@ -30,7 +32,7 @@ ru:
     sidebars:
       filters: "Фильтры"
     pagination:
-      empty: "%{model} не найдено" 
+      empty: "%{model} не найдено"
       one: "Результат: <b>1</b> %{model}"
       one_page: "Результат: <b>%{n}</b> %{model}"
       multiple: "Результат: %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> из <b>%{total}</b>"
@@ -38,10 +40,16 @@ ru:
     blank_slate:
       content: "Пока нет %{resource_name}."
       link: "Создать"
+    comments:
+      title_content: 'Комментарий'
+      no_comments_yet: 'Нет комментариев'
+      add: 'Добавить'
   sign_up: Регистрация
   send: Отправить
   sign_in: Вход
   name_site: Открыая психология
+  will_paginate:
+    page_gap: ' . . . '
   date:
     abbr_day_names:
     - Вс
@@ -303,56 +311,155 @@ ru:
       psychocenter:
         one: 'Псих. центр'
         other: 'Псих. центры'
+        few: 'Псих. центры'
       user:
         one: 'Пользователь'
         other: 'Пользователи'
+        few: 'Пользователи'
       role:
         one: 'Роль'
         other: 'Роли'
+        few: 'Роли'
       post:
         one: 'Блог'
         other: 'Блоги'
+        few: 'Блоги'
       novelty:
         one: 'Новость'
         other: 'Новости'
+        few: 'Новости'
       expert:
         one: 'Категория экспертов'
         other: 'Категории экспертов'
+        few: 'Категории экспертов'
       dayevent:
         one: 'Гороскопы и т.д.'
         other: 'Гороскопы и т.д.'
+        few: 'Гороскопы и т.д.'
       category:
         one: 'Категория новостей'
         other: 'Категории новостей'
+        few: 'Категории новостей'
       admin_user:
         one: 'Администратор'
         other: 'Администраторы'
+        few: 'Администраторы'
       page:
         one: 'Страничка'
         other: 'Странички'
+        few: 'Странички'
       banner:
         one: 'Баннер'
         other: 'Баннеры'
+        few: 'Баннеры'
       attachement:
         one: 'Изображение'
         other: 'Изображения'
+        few: 'Изображения'
       attachementfile:
         one: 'Файл'
         other: 'Файлы'
+        few: 'Файлы'
       question:
         one: 'Вопрос'
         other: 'Вопросы'
+        few: 'Вопросы'
       answer:
         one: 'Ответ'
         other: 'Ответы'
+        few: 'Ответы'
       test_mark:
         one: 'Балл за тест'
         other: 'Быллы за тесты'
+        few: 'Быллы за тесты'
       available_test:
         one: 'Тест'
         other: 'Тесты'
+        few: 'Тесты'
+      poll:
+        one: 'Опрос'
+        other: 'Опросы'
+        few: 'Опросы'
+      poll_answer:
+        one: 'Ответ для опросов'
+        other: 'Ответы для опросов'
+        few: 'Ответы для опросов'
+      send_list:
+        one: 'Расылка'
+        other: 'Расылки'
+        few: 'Расылки'
+      order:
+        one: 'Заказ'
+        other: 'Заказы'
+        few: 'Заказы'
+      order_lines:
+        one: 'Продукт заказа'
+        other: 'Продукты заказа'
+        few: 'Продукты заказа'
+      order_status:
+        one: 'Статус заказа'
+        other: 'Статусы заказа'
+        few: 'Статусы заказа'
+      product_category:
+        one: 'Категория продуктов'
+        other: 'Категории продуктов'
+        few: 'Категории продуктов'
+      product:
+        one: 'Продукт'
+        other: 'Продукты'
+        few: 'Продукты'
+      magazine:
+        one: 'Журнал'
+        other: 'Журналы'
+        few: 'Журналы'
+      magazine_image:
+        one: 'Журнальная страница'
+        other: 'Журнальные страницы'
+        few: 'Журнальные страницы'
+      search_log:
+        one: 'Стат. поиска'
+        other: 'Стат. поиска'
+        few: 'Стат. поиска'
+      video:
+        one: 'Видео файл'
+        other: 'Видео файлы'
+        few: 'Видео файлы'
+      playlist:
+        one: 'Плейлист'
+        other: 'Плейлисты'
+        few: 'Плейлисты'
+      cinema_club:
+        one: 'Кино клуб'
+        other: 'Кино клубы'
+        few: 'Кино клубы'
+      media_lib:
+        one: 'Медиатека'
+        other: 'Медиатеки'
+        few: 'Медиатеки'
+      cinema_club_category:
+        one: 'Категория киноклуба'
+        other: 'Категории киноклуба'
+        few: 'Категории киноклуба'
+      media_lib_category:
+        one: 'Категория медиатеки'
+        other: 'Категории Медиатеки'
+        few: 'Категории Медиатеки'
+      glossology:
+        one: 'Глоссарий'
+        other: 'Глоссарии'
+        few: 'Глоссарии'
+      broadcast:
+        one: 'Online трансляция'
+        other: 'Online трансляции'
+        few: 'Online трансляции'
+
 
     attributes:
+      search_log:
+        search_phrase: 'Фраза'
+        count_search: 'Число запросов'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
       user:
         email: 'E-mail'
         role: 'Роли'
@@ -361,13 +468,18 @@ ru:
         roles_name: 'Роль'
         avatar: 'Аватар'
         fio: 'ФИО'
+        specialization: 'Специализация'
         expert: 'Категория эксперта (только если назначена роль эксперта)'
         expert_describe: 'Описание эксперта (только если назначена роль эксперта)'
         blog_describe: 'Описание блогера (только если назначена роль блогера)'
+        interview: 'Интервью с экспертом'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         current_sing_in_at: 'Дата последнего входа'
         current_sign_in_ip: 'IP последнего входа'
+        price_consultation: 'Стоимость консультации'
+        id4broadcasting: 'ИД для консультаций'
+        show_on_main: 'Показывать эксперта на главной'
         updated_at: 'Обновлено'
         created_at: 'Создано'
       role:
@@ -392,9 +504,11 @@ ru:
         category_id: 'Категория'
         simple_news: 'Простая новость'
         partner_news: 'Новости партнера'
+        hit_news: 'Хит новость'
         updated_at: 'Обновлено'
         created_at: 'Создано'
         theme_of_the_day: 'Тема дня'
+        published_at: 'Дата публикации'
       expert:
         name: 'Название'
         updated_at: 'Обновлено'
@@ -439,8 +553,18 @@ ru:
         updated_at: 'Обновлено'
         created_at: 'Создано'
       banner:
+        link_count: 'Число переходов'
+        site_url: 'Ссылка(только для нижних баннеров)'
         image: 'Баннер'
+        show_bottom: 'Показывать внизу или слева'
         page_id: 'Ссылка на страничку'
+        in_new_window: 'Открывать в новом окне'
+        show_in_novelty: 'Показывать в новостях и статьях'
+        show_in_cinema_club: 'Показывать в Киноклубе'
+        show_in_media_lib: 'Показывать в медиабиблиотеке'
+        novelty: 'После новости'
+        cinema_club: 'После киноклуба'
+        media_lib: 'После медиабиблиотеке'
         updated_at: 'Обновлено'
         created_at: 'Создано'
       attachement:
@@ -451,24 +575,169 @@ ru:
         updated_at: 'Обновлено'
         created_at: 'Создано'
       question:
+        available_test: 'Тест'
         body: 'Вопрос'
         updated_at: 'Обновлено'
         created_at: 'Создано'
       test_mark:
+        available_test: 'Тест'
         mark_from: 'От'
         mark_to: 'До'
         answer: 'Ответ'
         updated_at: 'Обновлено'
         created_at: 'Создано'
       answer:
+        question: 'Вопрос'
         name: 'Ответ'
         mark: 'Балл за ответ'
         updated_at: 'Обновлено'
         created_at: 'Создано'
       available_test:
+        show_status: 'Показывать пользователям'
         name: 'Название'
         describe: 'Описание'
         updated_at: 'Обновлено'
         created_at: 'Создано'
+      poll:
+        name: 'Название'
+        body: 'Вопрос'
+        show_status: 'Доступен для голосования'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      poll_answer:
+        poll_id: 'Опрос'
+        body: 'Ответ'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      send_list:
+        name: 'Название'
+        body: 'Содержание'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      order:
+        user_id: 'Пользователь'
+        order_status_id: 'Статус заказа'
+        user: 'Пользователь'
+        order_status: 'Статус заказа'
+        pay_method: 'Способ оплаты'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      order_status:
+        rob_success: 'Использовать при успешной оплате ч/з робокассу'
+        name: 'Название'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      order_line:
+        order_id: 'Заказ'
+        product_id: 'Продукт'
+        unit_price: 'Стоимость единицы'
+        quantity: 'Колличество'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      product_category:
+        name: 'Название'
+        describe: 'Описание'
+        parent_id: 'Родитель'
+        parent: 'Родитель'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      product:
+        product_category: 'Категория продукта'
+        name: 'Название'
+        article: 'Артикул'
+        price: 'Цена'
+        old_price: 'Старая цена'
+        products_count: 'Колличество товара'
+        digital_product: 'Цифровой продукт'
+        file: 'Файл для цифрового продукта'
+        image: 'Изображение'
+        product_category_id: 'Категория продукта'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      magazine:
+        name: 'Название'
+        describe: 'Описание'
+        imege: 'Обложка'
+        file: 'PDF файл'
+        published_date: 'Дата публикации'
+        magazine_images: 'Страницы журнала'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      magazine_image:
+        magazine: 'Название номера'
+        image: 'Изображение'
+        page_type: 'Тип страницы'
+        page_number: 'Номер страницы'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      playlist:
+        name: 'Название'
+        videos: 'Видео файлы'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      video:
+        name: 'Название'
+        image: 'Картинка'
+        file_name: 'Имя файла'
+        describe: 'Описание'
+        videos: 'Видео файлы'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      cinema_club:
+        name: 'Название'
+        preview: 'Описание'
+        body: 'Содержание'
+        playlist_id: 'Плейлист'
+        playlist: 'Плейлист'
+        image: 'Кртинка'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      media_lib:
+        name: 'Название'
+        preview: 'Описание'
+        body: 'Содержание'
+        playlist_id: 'Плейлист'
+        playlist: 'Плейлист'
+        image: 'Кртинка'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      cinema_club_category:
+        name: 'Название'
+        describe: 'Описание'
+        image: 'Кртинка'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      media_lib_category:
+        name: 'Название'
+        describe: 'Описание'
+        image: 'Картинка'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      glossology:
+        name: 'Название'
+        describe: 'Описание'
+        name_url: 'Ссылка'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      broadcast:
+        name: 'Название'
+        describe: 'Описание'
+        image: 'Картинка'
+        media_lib_category: 'Категория'
+        stream_url: 'URL стрима'
+        stream_name: 'Название стрима'
+        date_translation: 'Дата трансляции'
+        price: 'Цена'
+        free_translation: 'Бесплатная трансляция'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+  formtastic:
+    actions:
+      create: "Создать %{model}"
+      update: "Сохранить изменения %{model}"
+      reset: "Сбросить форму"
+      cancel: "Отменить и покинуть форму"
+      dummie: "Запуск!"
+
 
 
