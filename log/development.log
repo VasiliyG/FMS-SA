@@ -6540,3 +6540,3164 @@ Migrating to CreateNovelties (20130409024050)
   [1m[36m (1.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130409024050')[0m
   [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from block (2 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-1.9.2-p290/bundler/gems/will_paginate-53d1da6da003/lib/will_paginate/railtie.rb:15)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-10 08:37:10 +0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin/print.css  (406ms)  (pid 3073)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/page/index.html.arb (2305.0ms)
+Completed 200 OK in 2694ms (Views: 2522.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow.gif" for 127.0.0.1 at 2013-04-10 08:37:14 +0700
+Served asset /active_admin/nested_menu_arrow.gif - 200 OK (25ms)
+
+
+Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2013-04-10 08:37:15 +0700
+Served asset /active_admin/nested_menu_arrow_dark.gif - 200 OK (37ms)
+
+
+Started GET "/admin/novelties" for 127.0.0.1 at 2013-04-10 08:37:16 +0700
+Processing by Admin::NoveltiesController#index as HTML
+  [1m[35mAdminUser Load (0.8ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `novelties` LIMIT 30 OFFSET 0) subquery_for_count [0m
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/index.html.arb (851.9ms)
+Completed 200 OK in 926ms (Views: 884.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:37:17 +0700
+Served asset /active_admin.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:37:17 +0700
+Compiled active_admin/lib/namespace.js  (523ms)  (pid 3073)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (183ms)  (pid 3073)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (205ms)  (pid 3073)
+Compiled active_admin/components/jquery.aa.popover.js  (195ms)  (pid 3073)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (212ms)  (pid 3073)
+Compiled active_admin/pages/application.js  (184ms)  (pid 3073)
+Compiled active_admin/pages/batch_actions.js  (146ms)  (pid 3073)
+Compiled active_admin/application.js  (1858ms)  (pid 3073)
+Compiled active_admin/base.js  (1876ms)  (pid 3073)
+Compiled active_admin.js  (1896ms)  (pid 3073)
+Served asset /active_admin.js - 200 OK (2168ms)
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2013-04-10 08:37:19 +0700
+Served asset /active_admin/datepicker/datepicker-input-icon.png - 200 OK (32ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:37:19 +0700
+Served asset /active_admin/print.css - 200 OK (5ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:37:21 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.5ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:30)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (421.6ms)
+Completed 200 OK in 450ms (Views: 435.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:37:22 +0700
+Served asset /active_admin.css - 304 Not Modified (5ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:37:22 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/admin/novelties" for 127.0.0.1 at 2013-04-10 08:37:55 +0700
+Processing by Admin::NoveltiesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `novelties` LIMIT 30 OFFSET 0) subquery_for_count 
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/index.html.arb (257.0ms)
+Completed 200 OK in 308ms (Views: 260.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:37:55 +0700
+Served asset /active_admin.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:37:55 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:37:56 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from block (2 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-1.9.2-p290/bundler/gems/will_paginate-53d1da6da003/lib/will_paginate/railtie.rb:15)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from block (2 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-1.9.2-p290/bundler/gems/will_paginate-53d1da6da003/lib/will_paginate/railtie.rb:15)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateAdminUsers (20130329054745)
+Migrating to CreateAdminNotes (20130329054810)
+Migrating to MoveAdminNotesToComments (20130329054811)
+Migrating to CreateNovelties (20130409024050)
+Migrating to CreateCkeditorAssets (20130410084117)
+  [1m[35m (24.5ms)[0m  CREATE TABLE `ckeditor_assets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `data_file_name` varchar(255) NOT NULL, `data_content_type` varchar(255), `data_file_size` int(11), `assetable_id` int(11), `assetable_type` varchar(30), `type` varchar(30), `width` int(11), `height` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (51.8ms)[0m  [1mCREATE INDEX `idx_ckeditor_assetable_type` ON `ckeditor_assets` (`assetable_type`, `type`, `assetable_id`)[0m
+  [1m[35m (20.3ms)[0m  CREATE INDEX `idx_ckeditor_assetable` ON `ckeditor_assets` (`assetable_type`, `assetable_id`)
+  [1m[36m (2.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130410084117')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from block (2 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-1.9.2-p290/bundler/gems/will_paginate-53d1da6da003/lib/will_paginate/railtie.rb:15)
+
+
+Started GET "/admin/novelties" for 127.0.0.1 at 2013-04-10 08:43:15 +0700
+Processing by Admin::NoveltiesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `novelties` LIMIT 30 OFFSET 0) subquery_for_count 
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/index.html.arb (1050.8ms)
+Completed 200 OK in 1256ms (Views: 1118.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:43:17 +0700
+Served asset /active_admin.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:43:17 +0700
+Compiled ckeditor/ckeditor.js  (45ms)  (pid 3390)
+Compiled ckeditor/init.js  (52ms)  (pid 3390)
+Compiled active_admin.js  (59ms)  (pid 3390)
+Served asset /active_admin.js - 200 OK (118ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:43:17 +0700
+Served asset /active_admin/print.css - 304 Not Modified (3ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:43:20 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (180.6ms)
+Completed 200 OK in 193ms (Views: 182.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:43:20 +0700
+Served asset /active_admin.css - 304 Not Modified (39ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:43:20 +0700
+Compiled ckeditor/config.js  (0ms)  (pid 3390)
+Served asset /ckeditor/config.js - 200 OK (27ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:43:20 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:43:21 +0700
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 3390)
+Served asset /ckeditor/skins/moono/editor.css - 200 OK (11ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:43:21 +0700
+Compiled ckeditor/lang/ru.js  (1ms)  (pid 3390)
+Served asset /ckeditor/lang/ru.js - 200 OK (9ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:43:21 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:43:21 +0700
+Compiled ckeditor/styles.js  (0ms)  (pid 3390)
+Served asset /ckeditor/styles.js - 200 OK (12ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/icons.png" for 127.0.0.1 at 2013-04-10 08:43:21 +0700
+Served asset /ckeditor/skins/moono/icons.png - 200 OK (5ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:43:21 +0700
+Compiled ckeditor/contents.css  (0ms)  (pid 3390)
+Served asset /ckeditor/contents.css - 200 OK (7ms)
+
+
+Started POST "/admin/novelties" for 127.0.0.1 at 2013-04-10 08:43:27 +0700
+Processing by Admin::NoveltiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2nWDyBf6yA1juvOx6VAZdEuSOfim4Sso8Q58gh1Ijs0=", "novelty"=>{"title"=>"", "preview"=>"", "body"=>"", "show_status"=>"0"}}
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 3ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: title, preview, body, show_status):
+  activemodel (3.2.9) lib/active_model/mass_assignment_security/sanitizer.rb:48:in `process_removed_attributes'
+  activemodel (3.2.9) lib/active_model/mass_assignment_security/sanitizer.rb:20:in `debug_protected_attribute_removal'
+  activemodel (3.2.9) lib/active_model/mass_assignment_security/sanitizer.rb:12:in `sanitize'
+  activemodel (3.2.9) lib/active_model/mass_assignment_security.rb:230:in `sanitize_for_mass_assignment'
+  activerecord (3.2.9) lib/active_record/attribute_assignment.rb:75:in `assign_attributes'
+  activerecord (3.2.9) lib/active_record/base.rb:497:in `initialize'
+  activeadmin (0.6.0) lib/active_admin/resource_controller/data_access.rb:141:in `new'
+  activeadmin (0.6.0) lib/active_admin/resource_controller/data_access.rb:141:in `build_new_resource'
+  activeadmin (0.6.0) lib/active_admin/resource_controller/data_access.rb:128:in `build_resource'
+  inherited_resources (1.4.0) lib/inherited_resources/actions.rb:31:in `create'
+  activeadmin (0.6.0) lib/active_admin/resource_controller/actions.rb:48:in `create'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:447:in `_run__3955460500452651373__process_action__2380832320066102664__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__1087882726265883220__call__1643974719201053954__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:43:40 +0700
+Compiled ckeditor/plugins/image/dialogs/image.js  (0ms)  (pid 3390)
+Served asset /ckeditor/plugins/image/dialogs/image.js - 200 OK (9ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:43:40 +0700
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 3390)
+Served asset /ckeditor/skins/moono/dialog.css - 200 OK (5ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/images/close.png" for 127.0.0.1 at 2013-04-10 08:43:40 +0700
+Served asset /ckeditor/skins/moono/images/close.png - 200 OK (4ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/images/mini.png" for 127.0.0.1 at 2013-04-10 08:43:40 +0700
+Served asset /ckeditor/skins/moono/images/mini.png - 200 OK (6ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:47:05 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1817.9ms)
+Completed 500 Internal Server Error in 1822ms
+
+ActionView::Template::Error (File to import not found or unreadable: ckeditor/init.
+Load path: Sass::Rails::Importer(/home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)
+  (in /home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)):
+    1: insert_tag renderer_for(:new)
+  app/assets/stylesheets/active_admin.css.scss:13
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:47:08 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (891.7ms)
+Completed 500 Internal Server Error in 911ms
+
+ActionView::Template::Error (File to import not found or unreadable: ckeditor/init.
+Load path: Sass::Rails::Importer(/home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)
+  (in /home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)):
+    1: insert_tag renderer_for(:new)
+  app/assets/stylesheets/active_admin.css.scss:13
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (71.2ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /active_admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /active_admin.js - 304 Not Modified (46ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:47:20 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (25.8ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Served asset /active_admin.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:21 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:22 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:47:22 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:47:22 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (76.5ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /active_admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:47:23 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:47 +0700
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:47:51 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:48:51 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled active_admin.css  (1158ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1273.9ms)
+Completed 200 OK in 1404ms (Views: 1401.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /active_admin.css - 200 OK (51ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:48:53 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:48:59 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:48:59 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (27.5ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /active_admin.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:49:04 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:07 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/flash/dialogs/flash.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:07 +0700
+Compiled ckeditor/plugins/flash/dialogs/flash.js  (0ms)  (pid 3390)
+Served asset /ckeditor/plugins/flash/dialogs/flash.js - 200 OK (7ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:49:52 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled ckeditor/filebrowser/stylesheets/uploader.css  (0ms)  (pid 3390)
+Compiled ckeditor/application.css  (51ms)  (pid 3390)
+Compiled active_admin.css  (1172ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1262.3ms)
+Completed 200 OK in 1266ms (Views: 1263.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /active_admin.css - 200 OK (53ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:49:54 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:56 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:49:56 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:50:09 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin.css  (1010ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1056.0ms)
+Completed 200 OK in 1060ms (Views: 1057.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:50:10 +0700
+Served asset /active_admin.css - 200 OK (57ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:50:11 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (26.3ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /active_admin.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:50:13 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (24.9ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Served asset /active_admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:20 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:50:21 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:50:21 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:51:31 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled active_admin.css  (2176ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (2308.5ms)
+Completed 200 OK in 2316ms (Views: 2312.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /active_admin.css - 200 OK (16ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.png" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /icons.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/icons.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:51:34 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:51:46 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin.css  (1120ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1238.3ms)
+Completed 200 OK in 1296ms (Views: 1289.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /active_admin.css - 200 OK (53ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:51:47 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:52:16 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (898.7ms)
+Completed 500 Internal Server Error in 903ms
+
+ActionView::Template::Error (File to import not found or unreadable: stuff.
+Load path: Sass::Rails::Importer(/home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)
+  (in /home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)):
+    1: insert_tag renderer_for(:new)
+  app/assets/stylesheets/active_admin.css.scss:14
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (24.6ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /active_admin.css - 304 Not Modified (44ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:52:23 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:56:14 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled active_admin.css  (8038ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (8157.8ms)
+Completed 200 OK in 8164ms (Views: 8160.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /active_admin.css - 200 OK (53ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.1ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:56:23 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (24.0ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /active_admin.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:56:26 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:58:01 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled active_admin.css  (1440ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1529.0ms)
+Completed 200 OK in 1534ms (Views: 1531.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /active_admin.css - 200 OK (60ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:58:03 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:58:05 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:58:05 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 08:59:11 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin.css  (1626ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1672.6ms)
+Completed 200 OK in 1677ms (Views: 1674.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /active_admin.css - 200 OK (70ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 08:59:13 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 08:59:15 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 08:59:15 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:00:19 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled active_admin.css  (1700ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1823.2ms)
+Completed 200 OK in 1829ms (Views: 1825.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /active_admin.css - 200 OK (62ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:00:21 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.png" for 127.0.0.1 at 2013-04-10 09:00:22 +0700
+Served asset /icons.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/icons.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:00:22 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:00:24 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:00:24 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/close.png" for 127.0.0.1 at 2013-04-10 09:00:24 +0700
+Served asset /images/close.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/close.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:01:01 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin.css  (1247ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1343.0ms)
+Completed 200 OK in 1348ms (Views: 1345.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /active_admin.css - 200 OK (63ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:01:02 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:04 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:04 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/close.png" for 127.0.0.1 at 2013-04-10 09:01:04 +0700
+Served asset /images/close.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/close.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:01:55 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+Compiled active_admin.css  (1194ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1489.0ms)
+Completed 200 OK in 1493ms (Views: 1490.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /active_admin.css - 200 OK (60ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:01:57 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:58 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:01:58 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/table/dialogs/table.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:02:26 +0700
+Compiled ckeditor/plugins/table/dialogs/table.js  (0ms)  (pid 3390)
+Served asset /ckeditor/plugins/table/dialogs/table.js - 200 OK (7ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:03:48 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (61.3ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:48 +0700
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:03:48 +0700
+Compiled active_admin.js  (0ms)  (pid 3390)
+Served asset /active_admin.js - 200 OK (79ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:03:48 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:48 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:03:50 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (25.9ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:50 +0700
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:03:50 +0700
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:03:50 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:50 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:03:52 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (60.4ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:52 +0700
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:03:52 +0700
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:03:52 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:52 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:03:59 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (25.0ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:59 +0700
+Served asset /active_admin.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:03:59 +0700
+Compiled active_admin.js  (0ms)  (pid 3390)
+Served asset /active_admin.js - 200 OK (4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:03:59 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:03:59 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (29.7ms)
+Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Compiled active_admin.js  (67ms)  (pid 3390)
+Served asset /active_admin.js - 200 OK (116ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:04:05 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:04:14 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (28.4ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /active_admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:04:15 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:17 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:17 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:04:41 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin.css  (1141ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1328.8ms)
+Completed 200 OK in 1333ms (Views: 1330.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /active_admin.css - 200 OK (16ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /active_admin.js - 304 Not Modified (3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:42 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:04:43 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (26.7ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Served asset /active_admin.js - 304 Not Modified (3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:56 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:04:57 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:04:57 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (79.6ms)
+Completed 200 OK in 113ms (Views: 82.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /active_admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:05:20 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:05:21 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (100.3ms)
+Completed 200 OK in 104ms (Views: 101.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /active_admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:05:22 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:05:27 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (72.2ms)
+Completed 200 OK in 103ms (Views: 74.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /active_admin.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /active_admin.js - 304 Not Modified (3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.2ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:05:28 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:12:30 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[35mAdminUser Load (0.5ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (947.4ms)
+Completed 500 Internal Server Error in 956ms
+
+ActionView::Template::Error (Undefined mixin 'border-radius'.
+  (in /home/vasiliyg/FMS-SA/app/assets/stylesheets/active_admin.css.scss)):
+    1: insert_tag renderer_for(:new)
+  app/assets/stylesheets/active_admin.css.scss:151:in `border-radius'
+  app/assets/stylesheets/active_admin.css.scss:151
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/admin/novelties/new" for 127.0.0.1 at 2013-04-10 09:12:47 +0700
+Processing by Admin::NoveltiesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 LIMIT 1[0m
+Compiled active_admin.css  (1029ms)  (pid 3390)
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions. (called from block (2 levels) in <top (required)> at /home/vasiliyg/FMS-SA/app/admin/novelties.rb:29)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/activeadmin-0.6.0/app/views/active_admin/resource/new.html.arb (1121.1ms)
+Completed 200 OK in 1129ms (Views: 1125.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-04-10 09:12:48 +0700
+Served asset /active_admin.css - 200 OK (61ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.9) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.9) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.9) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.9) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /ckeditor/config.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/editor.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /ckeditor/skins/moono/editor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/lang/ru.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /ckeditor/lang/ru.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/styles.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /ckeditor/styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/contents.css" for 127.0.0.1 at 2013-04-10 09:12:49 +0700
+Served asset /ckeditor/contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/skins/moono/dialog.css?t=D2LI" for 127.0.0.1 at 2013-04-10 09:12:51 +0700
+Served asset /ckeditor/skins/moono/dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor/plugins/image/dialogs/image.js?t=D2LI" for 127.0.0.1 at 2013-04-10 09:12:51 +0700
+Served asset /ckeditor/plugins/image/dialogs/image.js - 304 Not Modified (0ms)

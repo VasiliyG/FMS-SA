@@ -1,7 +1,6 @@
 #coding: utf-8
 #encoding: utf-8
 ActiveAdmin.register Novelty do
-  menu :parent => "Новости"
   filter :title
   filter :preview
   filter :body
@@ -23,8 +22,8 @@ ActiveAdmin.register Novelty do
     f.inputs "" do
         f.input :title
         f.input :image, :multipart => true , :hint => f.template.image_tag(f.object.image.url(:thumb))+(f.object.new_record? ? "" : (link_to "Удалить", "/admin/novelties/#{f.object.id}/remove_img"))
-        f.input :preview, :input_html => {:class => 'editor'}
-        f.input :body, :input_html => {:class => 'editor'}
+        f.input :preview, :as => :ckeditor
+        f.input :body, :as => :ckeditor
         f.input :show_status
       end
       f.buttons

@@ -26,3 +26,4 @@ gem 'devise', '>=2.0'
 gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 gem 'paperclip', :git => 'http://github.com/thoughtbot/paperclip.git'
 gem 'russian', '~> 0.6.0'
+gem "ckeditor"

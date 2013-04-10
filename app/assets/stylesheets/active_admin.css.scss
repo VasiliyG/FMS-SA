@@ -27,3 +27,232 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
+body.active_admin {
+   .cke {
+      display: inline-block;
+
+      table { width: auto; }
+
+      width: 78%;
+  }
+
+   .cke_button_label {
+      display: none;
+      padding-left: 3px;
+      margin-top: 1px;
+      line-height: 17px;
+      vertical-align: middle;
+      float: left;
+      cursor: default;
+      color: #474747;
+      text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  }
+
+   a.cke_button {
+      display: inline-block;
+      height: 18px;
+      padding: 4px 6px;
+      outline: 0;
+      cursor: default;
+      float: left;
+      border: 0;
+  }
+
+   .cke_button_icon {
+      cursor: inherit;
+      background-repeat: no-repeat;
+      margin-top: 1px;
+      width: 16px;
+      height: 16px;
+      float: left;
+      display: inline-block;
+  }
+
+   .cke_top {
+      border-bottom: 1px solid #b6b6b6;
+      padding: 6px 8px 2px;
+      -moz-box-shadow: 0 1px 0 #fff inset;
+      -webkit-box-shadow: 0 1px 0 #fff inset;
+      box-shadow: 0 1px 0 #fff inset;
+      background: #cfd1cf;
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#cfd1cf));
+      background-image: -moz-linear-gradient(top,#f5f5f5,#cfd1cf);
+      background-image: -webkit-linear-gradient(top,#f5f5f5,#cfd1cf);
+      background-image: -o-linear-gradient(top,#f5f5f5,#cfd1cf);
+      background-image: -ms-linear-gradient(top,#f5f5f5,#cfd1cf);
+      background-image: linear-gradient(top,#f5f5f5,#cfd1cf);
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#fff5f5f5',endColorstr='#ffcfd1cf');
+  }
+
+  .cke_bottom {
+      padding: 6px 8px 2px;
+      position: relative;
+      border-top: 1px solid #bfbfbf;
+      -moz-box-shadow: 0 1px 0 #fff inset;
+      -webkit-box-shadow: 0 1px 0 #fff inset;
+      box-shadow: 0 1px 0 #fff inset;
+      background: #cfd1cf;
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#ebebeb),to(#cfd1cf));
+      background-image: -moz-linear-gradient(top,#ebebeb,#cfd1cf);
+      background-image: -webkit-linear-gradient(top,#ebebeb,#cfd1cf);
+      background-image: -o-linear-gradient(top,#ebebeb,#cfd1cf);
+      background-image: -ms-linear-gradient(top,#ebebeb,#cfd1cf);
+      background-image: linear-gradient(top,#ebebeb,#cfd1cf);
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#ffebebeb',endColorstr='#cfd1cf');
+  }
+
+  .cke_path {
+      float: left;
+      margin: -2px 0 2px;
+  }
+
+  .cke_path_item, .cke_path_empty {
+    display: inline-block;
+    float: left;
+    padding: 3px 4px;
+    margin-right: 2px;
+    cursor: default;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    color: #4c4c4c;
+    text-shadow: 0 1px 0 #fff;
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  .cke_toolgroup {
+      float: left;
+      margin: 0 6px 5px 0;
+      border: 1px solid #a6a6a6;
+      border-bottom-color: #979797;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -moz-box-shadow: 0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+      -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+      box-shadow: 0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+      background: #e4e4e4;
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e4e4e4));
+      background-image: -moz-linear-gradient(top,#fff,#e4e4e4);
+      background-image: -webkit-linear-gradient(top,#fff,#e4e4e4);
+      background-image: -o-linear-gradient(top,#fff,#e4e4e4);
+      background-image: -ms-linear-gradient(top,#fff,#e4e4e4);
+      background-image: linear-gradient(top,#fff,#e4e4e4);
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#ffffffff',endColorstr='#ffe4e4e4');
+  }
+
+  .cke_combo_button {
+    display: inline-block;
+    float: left;
+    margin: 0 6px 5px 0;
+    border: 1px solid #a6a6a6;
+    border-bottom-color: #979797;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5),0 0 2px rgba(255,255,255,.15) inset,0 1px 0 rgba(255,255,255,.15) inset;
+    background: #e4e4e4;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e4e4e4));
+    background-image: -moz-linear-gradient(top,#fff,#e4e4e4);
+    background-image: -webkit-linear-gradient(top,#fff,#e4e4e4);
+    background-image: -o-linear-gradient(top,#fff,#e4e4e4);
+    background-image: -ms-linear-gradient(top,#fff,#e4e4e4);
+    background-image: linear-gradient(top,#fff,#e4e4e4);
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#ffffffff',endColorstr='#ffe4e4e4');
+  }
+
+  .cke_dialog_body {
+    border: 1px solid #b2b2b2;
+    border-bottom-color: #999;
+  }
+
+  .cke_dialog_title {
+    padding: 6px 10px;
+    border-bottom: 1px solid #999;
+  }
+
+  .cke_combo_text {
+    line-height: 26px;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: left;
+    cursor: default;
+    color: #474747;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    width: 60px;
+  }
+
+  .cke_combo_button {
+    margin: 0 6px 5px 0;
+  }
+
+  .cke_toolbar_separator {
+    margin: 5px 2px 0;
+  }
+
+  .cke_chrome {
+    border: 1px solid #b6b6b6;
+  }
+
+  .cke_resizer {
+    border-width: 10px 10px 0 0;
+    border-color: transparent #666 transparent transparent;
+    border-style: dashed solid dashed dashed;
+  }
+
+  .cke_combo_arrow {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #474747;
+    margin: 11px 0 0;
+  }
+
+  .cke_combo_open {
+    margin: 1px 7px 1px;
+  }
+
+  .cke_dialog_tabs {
+    margin: 5px 0 0;
+  }
+
+  .cke_dialog_tab {
+    padding: 4px 8px;
+    margin-right: 3px;
+    border: 1px solid #bfbfbf;
+  }
+
+  .cke_dialog_contents_body {
+    padding: 17px 10px 5px 10px;
+    margin-top: 22px;
+  }
+
+  .cke_dialog_ui_vbox table, .cke_dialog_ui_hbox table {
+    margin: auto;
+  }
+
+  .cke_dialog_ui_vbox_child {
+    padding: 5px 0;
+  }
+
+  .cke_dialog_contents {
+    padding: 15px 10px 5px 10px;
+    margin-top: 30px;
+    border-top: 1px solid #bfbfbf;
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+  }
+
+  a.cke_dialog_ui_button {
+    padding: 3px 0;
+    margin: 0;
+    vertical-align: middle;
+    border: 1px solid #b6b6b6;
+    border-bottom-color: #999;
+  }
+
+  span.cke_dialog_ui_button {
+    padding: 0 12px;
+  }
+}
