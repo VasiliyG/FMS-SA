@@ -4,10 +4,12 @@ ActiveAdmin.register Novelty do
   filter :title
   filter :preview
   filter :body
+  filter :novelty_category
   filter :created_at
   filter :updated_at
   index do
     column :title
+    column :novelty_category
     column :image do |item|
        image_tag item.image.url(:thumb)
       end
@@ -21,6 +23,7 @@ ActiveAdmin.register Novelty do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "" do
         f.input :title
+        f.input :novelty_category
         f.input :image, :multipart => true , :hint => f.template.image_tag(f.object.image.url(:thumb))+(f.object.new_record? ? "" : (link_to "Удалить", "/admin/novelties/#{f.object.id}/remove_img"))
         f.input :preview, :as => :ckeditor
         f.input :body, :as => :ckeditor

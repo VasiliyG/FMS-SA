@@ -50,7 +50,6 @@ module Ca
     config.i18n.locale = :ru
     config.i18n.default_locale = :ru
     config.filter_parameters += [:password]
-
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 

@@ -1,0 +1,7 @@
+<%= meta_title(@novelty.title) %>
+<%menu :current => "novelties"%>
+<h1><%= @novelty.title %></h1>
+
+<%= image_tag @novelty.image.url(:original) %>
+<%= @novelty.preview.html_safe %>
+<%= @novelty.body.html_safe %>

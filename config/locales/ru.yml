@@ -328,6 +328,10 @@ ru:
         one: 'Новость'
         other: 'Новости'
         few: 'Новости'
+      novelty_category:
+        one: 'Категория новостей'
+        other: 'Категории новостей'
+        few: 'Категорий новостей'
       expert:
         one: 'Категория экспертов'
         other: 'Категории экспертов'
@@ -500,8 +504,8 @@ ru:
         preview: 'Превью'
         body: 'Содержание'
         show_status: 'Выводить на сайте'
-        category: 'Категория'
-        category_id: 'Категория'
+        novelty_category: 'Категория'
+        novelty_category_id: 'Категория'
         simple_news: 'Простая новость'
         partner_news: 'Новости партнера'
         hit_news: 'Хит новость'
@@ -509,6 +513,11 @@ ru:
         created_at: 'Создано'
         theme_of_the_day: 'Тема дня'
         published_at: 'Дата публикации'
+      novelty_category:
+        titel: 'Название'
+        show_on_footer: 'Показывать в футере'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
       expert:
         name: 'Название'
         updated_at: 'Обновлено'

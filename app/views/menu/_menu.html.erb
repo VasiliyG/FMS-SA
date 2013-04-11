@@ -1,0 +1,30 @@
+<div class="wrapper col2">
+  <div id="topnav">
+    <ul>
+      <li class="<%= options[:current] == "root" ? "active" : "" %>"><%= link_to "Главная", root_path %>
+        <ul>
+          <li><a href="#">Студенты</a></li>
+          <li><a href="#">Преподаватели</a></li>
+          <li class="last"><a href="#">О Кафедре</a></li>
+        </ul>
+      </li>
+      <li class="<%= options[:current] == "novelties" ? "active" : "" %>"><%= link_to "Новости", novelties_path %>
+        <ul>
+          <% temp = NoveltyCategory.order(:sort) %>
+          <% temp.each_with_index do |category, index| %>
+            <li class="<%= index+1 == temp.size ? "last" : "" %>"> <%= link_to category.title, novelties_with_cat_path(category.id) %> </li>
+          <% end %>
+        </ul>
+      </li>
+      <li><a href="full-width.html">Страница</a>
+        <ul>
+          <li><a href="#">Страница</a></li>
+          <li><a href="#">Страница</a></li>
+          <li class="last"><a href="#">Страница</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Страница</a></li>
+      <li class="last"><a href="#">Страница</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<%= meta_title("Новости") %>
+<%menu :current => "novelties"%>
+<h1>Новосточки</h1>
+
+<% @novelties.each do |novelty| %>
+    <%= link_to novelty.title, novelty_path(novelty.id) %>
+    <%= link_to (image_tag novelty.image.url(:thumb)), novelty_path(novelty.id) %>
+    <%= novelty.preview.html_safe %>
+    <br/>
+<% end %>
