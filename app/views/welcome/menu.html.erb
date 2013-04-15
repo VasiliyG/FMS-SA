@@ -1,0 +1,5 @@
+
+<%= meta_title(@menu.name) %>
+<%menu :current => "pages", :current_url => @menu.name_url%>
+<h1><%= @menu.name %></h1>
+<%= @menu.body.html_safe %>

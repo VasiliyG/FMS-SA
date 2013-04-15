@@ -1,0 +1,9 @@
+<% if @menu %>
+    <%= meta_title(@menu.name) %>
+    <%menu :current => "pages", :current_url => @menu.menu_up.name_url%>
+<% else %>
+    <%= meta_title(@page.name) %>
+   <%menu :current => "root"%>
+<% end %>
+<h1><%= (@menu ? @menu.name : @page.name) %></h1>
+<%= @page.body.html_safe %>

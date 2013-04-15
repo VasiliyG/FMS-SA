@@ -5,7 +5,7 @@
         <ul>
           <% temp_page = Page.where(:show_above_main => true) %>
           <% temp_page.each_with_index do |page, index| %>
-              <li class=<%= index+1 == temp_page.size ? "last" : "" %>><%= link_to page.name, page_path(page.name_url) %></li>
+              <li class=<%= index+1 == temp_page.size ? "last" : "" %>><%= link_to page.name, page_path("main",page.name_url) %></li>
           <% end %>
         </ul>
       </li>
@@ -19,13 +19,25 @@
       </li>
       <% menu_temp = MenuUp.order(:sort) %>
       <% menu_temp.each_with_index do |menu, index| %>
-        <li class="<%= index+1 == menu_temp.size ? "last" : "" %>"  class="<%= options[:current_url] == menu.name_url ? "active" : "" %>">
-          <%= link_to menu.name, menu_path(menu.name_url) %>
+          <% my_class = (index+1 == menu_temp.size ? "last" : "") %>
+          <% my_class += (options[:current_url] == menu.name_url ? "active" : "") %>
+        <li class="<%= my_class %>">
+          <% if menu.external_url %>
+            <%= link_to menu.name, menu.url %>
+          <% else %>
+            <%= link_to menu.name, menu_path(menu.name_url) %>
+          <% end %>
           <% unless menu.menu_downs.empty? %>
             <ul>
               <% menu_down_temp = menu.menu_downs.order(:sort) %>
               <% menu_down_temp.each_with_index do |down, index| %>
-                <li class=<%= index+1 == menu_down_temp.size ? "last" : "" %>><%= link_to down.page.name, page_path(down.page.name_url) %></li>
+                <li class=<%= index+1 == menu_down_temp.size ? "last" : "" %>>
+                  <% if down.external_url %>
+                    <%= link_to down.name, down.url %>
+                  <% else %>
+                    <%= link_to down.name, page_path(down.name_url,down.page.name_url) %>
+                  <% end %>
+                </li>
               <% end %>
             </ul>
           <% end %>
