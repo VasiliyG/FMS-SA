@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411084651) do
+ActiveRecord::Schema.define(:version => 20130415034758) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -62,6 +62,29 @@ ActiveRecord::Schema.define(:version => 20130411084651) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "menu_downs", :force => true do |t|
+    t.string   "name"
+    t.string   "name_url"
+    t.integer  "sort"
+    t.string   "url"
+    t.boolean  "external_url"
+    t.integer  "page_id"
+    t.integer  "menu_up_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "menu_ups", :force => true do |t|
+    t.string   "name"
+    t.string   "name_url"
+    t.text     "body"
+    t.integer  "sort"
+    t.string   "url"
+    t.boolean  "external_url"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "novelties", :force => true do |t|
     t.string   "title"
     t.text     "preview"
@@ -82,6 +105,15 @@ ActiveRecord::Schema.define(:version => 20130411084651) do
     t.integer  "sort",           :default => 0
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.string   "name_url"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.text     "body"
+    t.boolean  "show_above_main"
   end
 
 end

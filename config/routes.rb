@@ -10,4 +10,7 @@ Ca::Application.routes.draw do
   match 'novelties' => 'novelties#index', :as => :novelties
   match 'novelties/:id' => 'novelties#index', :as => :novelties_with_cat
   match 'novelty/:id' => 'novelties#show', :as => :novelty
+
+  match 'page/:name_url' => 'welcome#page', :as => :page
+  match 'menu/:name_url' => 'welcome#menu', :as => :menu
 end
