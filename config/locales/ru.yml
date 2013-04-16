@@ -456,9 +456,32 @@ ru:
         one: 'Online трансляция'
         other: 'Online трансляции'
         few: 'Online трансляции'
-
+      menu_up:
+        one: 'Верхнее меню'
+        other: 'Верхнее меню'
+        few: 'Верхнее меню'
+      menu_down:
+        one: 'Нижние меню'
+        other: 'Нижние меню'
+        few: 'Нижние меню'
 
     attributes:
+      menu_up:
+        name: 'Название'
+        body: 'Содержание'
+        url: 'Внешняя ссылка'
+        external_url: 'Сделать внещней ссылкой'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
+      menu_down:
+        name: 'Название'
+        body: 'Содержание'
+        url: 'Внешняя ссылка'
+        page: 'Страничка'
+        menu_up: 'верхнее меню'
+        external_url: 'Сделать внещней ссылкой'
+        updated_at: 'Обновлено'
+        created_at: 'Создано'
       search_log:
         search_phrase: 'Фраза'
         count_search: 'Число запросов'
@@ -503,6 +526,7 @@ ru:
         image: 'Картинка'
         preview: 'Превью'
         body: 'Содержание'
+        cool_news: 'Выводить на главной страничке'
         show_status: 'Выводить на сайте'
         novelty_category: 'Категория'
         novelty_category_id: 'Категория'
@@ -544,7 +568,8 @@ ru:
         updated_at: 'Обновлено'
         created_at: 'Создано'
       page:
-        title: 'Заголовок'
+        name: 'Заголовок'
+        show_above_main: 'Показывать на вкладке Главная'
         body: 'Содержание'
         updated_at: 'Обновлено'
         created_at: 'Создано'

@@ -37,30 +37,15 @@
   <div id="container">
     <div id="hpage">
       <ul>
-        <li>
-          <h2>Интереснейшная новость</h2>
-          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
-          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
-          <p class="readmore"><a href="#">Далее &raquo;</a></p>
-        </li>
-        <li>
-          <h2>Интереснейшная новость</h2>
-          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
-          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
-          <p class="readmore"><a href="#">Далее &raquo;</a></p>
-        </li>
-        <li>
-          <h2>Интереснейшная новость</h2>
-          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
-          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
-          <p class="readmore"><a href="#">Далее &raquo;</a></p>
-        </li>
-        <li class="last">
-          <h2>Интереснейшная новость</h2>
-          <div class="imgholder"><a href="#"><img src="/assets/demo/200x140.gif" alt="" /></a></div>
-          <p>Это совсем ничего не значащий текст, просто создан с целью показать границы текствого блока. Тектовый блок новостей, служит для отображения превью новостей со ссылкой для чтения самой новости, а так же со ссылкой на все последние новости. Ура ура ура.</p>
-          <p class="readmore"><a href="#">Далее &raquo;</a></p>
-        </li>
+        <% temp_news = Novelty.where(:show_status => true, :cool_news => true).order("rand()").limit(4) %>
+        <% temp_news.each_with_index do |news, index| %>
+          <li class=<%= index+1 == temp_news.size ? "last" : "" %>>
+            <h2><%= news.title %> </h2>
+            <div class="imgholder"><%= link_to (image_tag news.image.url(:for_main)), novelty_path(news.id) %></div>
+            <p><%= strip_tags(news.preview).html_safe.truncate(200) %></p>
+            <p class="readmore"><%= link_to "Далее", novelty_path(news.id) %></p>
+          </li>
+        <% end %>
       </ul>
       <br class="clear" />
     </div>

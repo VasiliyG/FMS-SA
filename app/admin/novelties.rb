@@ -10,6 +10,7 @@ ActiveAdmin.register Novelty do
   index do
     column :title
     column :novelty_category
+    column :cool_news
     column :image do |item|
        image_tag item.image.url(:thumb)
       end
@@ -28,6 +29,7 @@ ActiveAdmin.register Novelty do
         f.input :preview, :as => :ckeditor
         f.input :body, :as => :ckeditor
         f.input :show_status
+        f.input :cool_news
       end
       f.buttons
   end
